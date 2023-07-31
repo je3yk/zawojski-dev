@@ -12,9 +12,10 @@ export default function BussinesCard() {
       <div className="col-span-1 bg-slate-500">
         <Image
           src={MeImage}
-          alt="Jędrzej Zawojski photo"
+          alt="|ICZY1M{k=t7-TNGWWofoz_NM|I=ofM{WBRks:j]Ios:$$WBWCofs:Rkax4.ozaKRkSht6oMWCaybbt7sSoJogazofofae%MRkR*WBaxWBj[ofWBWBj[RjofWBofj[j[WVaej[s:ayt7a#j?WBj]oeayNHWCs:jsRjjbj["
           width={200}
           height={250}
+          placeholder="blur"
         />
       </div>
       <div className="col-span-2 bg-neutral-50 flex flex-col gap-2">
