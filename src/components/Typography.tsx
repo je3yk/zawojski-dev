@@ -3,13 +3,13 @@ import { VariantProps, cva } from "class-variance-authority";
 const variants = cva("", {
   variants: {
     variant: {
-      h1: ["text-3xl", "md:text-4xl", "font-bold"],
-      h2: ["text-2xl", "md:text-3xl", "font-bold"],
+      h1: ["text-4xl", "md:text-6xl", "font-bold"],
+      h2: ["text-2xl", "md:text-4xl", "font-bold"],
       h3: ["text-xl", "md:text-2xl", "font-bold"],
       bodyLargeStrong: ["text-lg", "md:text-xl", "font-bold"],
       bodyLarge: ["text-lg", "md:text-xl"],
       body: ["text-base", "md:text-lg"],
-      caption: ["text-sm", "md:text-base"],
+      caption: ["text-base", "md:text-xl"],
     },
   },
 });

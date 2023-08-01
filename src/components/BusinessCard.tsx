@@ -4,26 +4,29 @@ import { AiFillMail } from "react-icons/ai";
 
 import Image from "next/image";
 
-import MeImage from "@/images/me.jpg";
+import MeImage from "@/images/me.png";
 
 export default function BussinesCard() {
   return (
-    <div className="grid grid-flow-col grid-cols-3 bg-neutral-50 p-2 gap-2">
-      <div className="col-span-1 bg-slate-500">
+    <div className="grid md:grid-flow-col grid-rows-2 md:grid-rows-none md:grid-cols-3 bg-neutral-50 p-2 gap-2 content-center">
+      <div className="col-span-3 md:col-span-1 row-span-1">
         <Image
           src={MeImage}
           alt="|ICZY1M{k=t7-TNGWWofoz_NM|I=ofM{WBRks:j]Ios:$$WBWCofs:Rkax4.ozaKRkSht6oMWCaybbt7sSoJogazofofae%MRkR*WBaxWBj[ofWBWBj[RjofWBofj[j[WVaej[s:ayt7a#j?WBj]oeayNHWCs:jsRjjbj["
-          width={200}
-          height={250}
           placeholder="blur"
+          width={320}
+          height={320}
+          className="mx-auto"
         />
       </div>
-      <div className="col-span-2 bg-neutral-50 flex flex-col gap-2">
-        <div className="flex flex-col items-center bg-slate-500 p-5 h-full justify-center">
-          <Typography variant="h1">Jędrzej Zawojski</Typography>
-          <Typography variant="caption">Fullstack Web Developer</Typography>
+      <div className="col-span-3 md:col-span-2 bg-neutral-50 flex flex-col gap-2 row-span-1">
+        <div className="flex flex-col items-center bg-slate-500 p-5 h-full justify-center gap-5">
+          <Typography variant="h1" className="text-center">
+            Jędrzej Zawojski
+          </Typography>
+          <Typography variant="h3">Fullstack Web Developer</Typography>
         </div>
-        <div className="flex justify-between items-center bg-slate-500 p-5 gap-5">
+        <div className="h-fit flex justify-between md:justify-around items-center bg-slate-500 p-5 gap-5">
           <a
             href="https://github.com/je3yk"
             rel="noopener noreffer"
