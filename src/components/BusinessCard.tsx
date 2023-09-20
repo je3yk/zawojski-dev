@@ -24,7 +24,7 @@ export default function BussinesCard() {
           <Typography variant="h1" className="text-center">
             Jędrzej Zawojski
           </Typography>
-          <Typography variant="h3">Fullstack Web Developer</Typography>
+          <Typography variant="h3">Full-stack Web Developer</Typography>
         </div>
         <div className="h-fit flex justify-between md:justify-around items-center bg-slate-500 p-5 gap-5">
           <a

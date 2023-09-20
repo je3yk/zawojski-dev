@@ -1,7 +1,6 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Roboto } from "next/font/google";
+import "./globals.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -10,7 +9,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "zawojski.dev",
-  description: "Fullstack Web Developer",
+  description: "Full stack Web Developer",
 };
 
 export default function RootLayout({
