@@ -1,6 +1,8 @@
-import Typography from "./Typography";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { AiFillMail } from "react-icons/ai";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { SiNodedotjs, SiReact, SiTypescript } from "react-icons/si";
+
+import Typography from "./Typography";
 
 import Image from "next/image";
 
@@ -24,7 +26,12 @@ export default function BussinesCard() {
           <Typography variant="h1" className="text-center">
             Jędrzej Zawojski
           </Typography>
-          <Typography variant="h3">Full-stack Web Developer</Typography>
+          <Typography variant="h3">Full stack web developer</Typography>
+          <div className="flex gap-5">
+            <SiTypescript className="text-3xl" />
+            <SiNodedotjs className="text-3xl" />
+            <SiReact className="text-3xl" />
+          </div>
         </div>
         <div className="h-fit flex justify-between md:justify-around items-center bg-slate-500 p-5 gap-5">
           <a
