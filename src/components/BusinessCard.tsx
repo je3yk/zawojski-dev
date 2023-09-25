@@ -1,5 +1,6 @@
 import { AiFillMail } from "react-icons/ai";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiNodedotjs, SiReact, SiTypescript } from "react-icons/si";
 
 import Typography from "./Typography";
@@ -53,7 +54,7 @@ export default function BussinesCard() {
             rel="noopener noreffer"
             target="_blank"
           >
-            <FaTwitter className="text-3xl hover:text-slate-300" />
+            <FaXTwitter className="text-3xl hover:text-slate-300" />
           </a>
           <a href="mailto:jedrzej.zawojski95@gmail.com" target="_blank">
             <AiFillMail className="text-3xl hover:text-slate-300" />
