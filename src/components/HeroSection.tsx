@@ -1,16 +1,9 @@
-import { useEffect, useState } from "react";
 import { Mail } from "lucide-react";
 
 import { profile, stack } from "@/data/hero";
 
 export function HeroSection() {
-  const [blink, setBlink] = useState(true);
   const heroImageSrc = `${import.meta.env.BASE_URL}hero.png`;
-
-  useEffect(() => {
-    const id = setInterval(() => setBlink((value) => !value), 530);
-    return () => clearInterval(id);
-  }, []);
 
   return (
     <section id="hero">
@@ -37,11 +30,7 @@ export function HeroSection() {
             <h1 className="whitespace-nowrap text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl">
               {profile.name}
               <span
-                className="ml-2 inline-block h-8 w-[3px] align-middle bg-primary sm:h-9"
-                style={{
-                  opacity: blink ? 1 : 0,
-                  transition: "opacity 0.1s",
-                }}
+                className="blink-caret ml-2 inline-block h-8 w-[3px] align-middle bg-primary sm:h-9"
               />
             </h1>
             <p className="text-sm text-muted-foreground">{profile.role}</p>
