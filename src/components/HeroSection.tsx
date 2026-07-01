@@ -5,6 +5,7 @@ import { profile, stack } from "@/data/hero";
 
 export function HeroSection() {
   const [blink, setBlink] = useState(true);
+  const heroImageSrc = `${import.meta.env.BASE_URL}hero.png`;
 
   useEffect(() => {
     const id = setInterval(() => setBlink((value) => !value), 530);
@@ -17,7 +18,7 @@ export function HeroSection() {
         <div className="relative self-start sm:hidden">
           <div className="relative h-28 w-28 overflow-hidden border border-border bg-secondary">
             <img
-              src="/hero.png"
+              src={heroImageSrc}
               alt={profile.name}
               className="h-full w-full object-cover grayscale transition-all duration-500 hover:grayscale-0"
             />
@@ -55,7 +56,7 @@ export function HeroSection() {
           <div className="relative hidden shrink-0 sm:block">
             <div className="relative h-36 w-36 overflow-hidden border border-border bg-secondary sm:h-44 sm:w-44">
               <img
-                src="/hero.png"
+                src={heroImageSrc}
                 alt={profile.name}
                 className="h-full w-full object-cover grayscale transition-all duration-500 hover:grayscale-0"
               />
