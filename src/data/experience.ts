@@ -1,0 +1,88 @@
+import type { ExperienceEntry } from "@/components/TimelineEntry";
+
+export const experience: ExperienceEntry[] = [
+  {
+    id: "exp-06",
+    role: "Senior Full Stack Developer",
+    company: "WAYF",
+    period: "May 2025 - Present",
+    location: "Remote · Warsaw, PL",
+    contract: "Contract",
+    bullets: [
+      "Delivered full-stack work across an enterprise Payload CMS platform and a mobile app for multi-vendor product catalogues.",
+      "Built flows to scrape and import products from URLs, organize catalogues, publish storefronts, and manage orders end-to-end.",
+      "Adopted AI coding agents (Claude Code and Cursor) as a core part of daily delivery workflow.",
+    ],
+    tags: ["React Native", "Expo", "Payload CMS", "Medusa v1", "Node.js", "TypeScript", "Next.js", "Firecrawl"],
+  },
+  {
+    id: "exp-05",
+    role: "Senior Full Stack Engineer (Staff)",
+    company: "Promethean",
+    period: "Jul 2024 - May 2025",
+    location: "Wroclaw, PL",
+    contract: "Full-time",
+    bullets: [
+      "Led the frontend team building a content management and sharing platform integrated with web and mobile whiteboard apps.",
+      "Contributed to backend integrations between services supporting the platform ecosystem.",
+      "Improved developer experience through component simplification, stronger type safety, and initial routing migration.",
+    ],
+    tags: ["React", "Vite", "Node.js", "Zod", "Zustand", "TanStack Router"],
+  },
+  {
+    id: "exp-04",
+    role: "Software Developer",
+    company: "Teacode.io",
+    period: "Nov 2023 - Jun 2024",
+    location: "Remote · Warsaw, PL",
+    contract: "Contract",
+    bullets: [
+      "Built full-stack features for an early-stage travel planning app.",
+      "Implemented product capabilities in a Next.js and Nest.js stack focused on shipping new functionality quickly.",
+      "Worked on system performance improvements alongside feature development.",
+    ],
+    tags: ["Next.js", "Material UI", "Nest.js", "Drizzle", "TypeScript"],
+  },
+  {
+    id: "exp-03",
+    role: "Software Engineer",
+    company: "Product Brew",
+    period: "May 2023 - Jul 2023",
+    location: "Hybrid · Wroclaw, PL",
+    contract: "Contract",
+    bullets: [
+      "Designed and developed features for a high-traffic product in the US Medicare domain.",
+      "Contributed to core capabilities including user authentication and content aggregation across services.",
+      "Supported stack evolution from GraphQL to tRPC in selected parts of the system.",
+    ],
+    tags: ["Next.js", "Tailwind", "tRPC", "Zod", "Prisma"],
+  },
+  {
+    id: "exp-02",
+    role: "Web Developer",
+    company: "Explain Everything (now Promethean)",
+    period: "May 2021 - May 2023",
+    location: "Wroclaw, PL",
+    contract: "Full-time",
+    bullets: [
+      "Developed and maintained microservices powering account management for web and mobile whiteboard applications.",
+      "Worked across backend and frontend boundaries to support education and business use cases.",
+      "Contributed to reliable day-to-day development of core user account systems.",
+    ],
+    tags: ["TypeScript", "JavaScript", "React", "Node.js", "Express", "PostgreSQL"],
+  },
+  {
+    id: "exp-01",
+    role: "Solutions Engineer",
+    company: "Siemens Digital Logistics",
+    period: "Jan 2019 - Apr 2021",
+    location: "Wroclaw, PL",
+    contract: "Full-time",
+    bullets: [
+      "Consulted on customer projects for supply chain and logistics management solutions.",
+      "Implemented software features supporting planning, visibility, and operational control workflows.",
+      "Collaborated with stakeholders to adapt technical solutions to business requirements.",
+    ],
+    tags: ["Java", "JavaScript", "SQL"],
+  },
+];

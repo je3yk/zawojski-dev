@@ -5,14 +5,19 @@ export type ProjectEntry = {
   title: string;
   desc: string;
   tags: string[];
-  status: string;
-  year: string;
+  status: "wip" | "active" | "deployed";
   url: string | null;
   repo: string | null;
 };
 
 type ProjectCardProps = {
   project: ProjectEntry;
+};
+
+const statusColors = {
+  wip: "border-yellow-500/40 text-yellow-600 dark:text-yellow-400",
+  active: "border-green-500/40 text-green-600 dark:text-green-400",
+  deployed: "border-blue-500/40 text-blue-600 dark:text-blue-400",
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
@@ -22,9 +27,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex items-center justify-between">
           <span className="text-[10px] text-primary">{project.id}</span>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-muted-foreground">{project.year}</span>
             <span
-              className={`border px-1.5 py-0.5 text-[10px] ${project.status === "active" ? "border-green-500/40 text-green-600 dark:text-green-400" : "border-border text-muted-foreground"}`}
+              className={`border px-1.5 py-0.5 text-[10px] ${statusColors[project.status]}`}
             >
               {project.status}
             </span>
@@ -33,7 +37,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <h3 className="text-sm font-medium text-foreground transition-colors group-hover:text-primary">
           {project.title}
         </h3>
-        <p className="text-xs leading-relaxed text-muted-foreground">{project.desc}</p>
+        <p className="text-xs leading-relaxed text-muted-foreground">
+          {project.desc}
+        </p>
         <div className="mt-auto flex flex-wrap gap-2 pt-1">
           {project.tags.map((tag) => (
             <span
