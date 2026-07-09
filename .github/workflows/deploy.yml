@@ -17,6 +17,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
+    env:
+      VITE_POSTHOG_PROJECT_TOKEN: ${{ secrets.VITE_POSTHOG_PROJECT_TOKEN }}
+      VITE_POSTHOG_HOST: ${{ secrets.VITE_POSTHOG_HOST }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,10 +33,40 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Verify PostHog environment variables
+        run: |
+          sanitize() {
+            local value="$1"
+            local length="${#value}"
+
+            if [ "$length" -le 8 ]; then
+              echo "***"
+            else
+              echo "${value:0:4}...${value: -4}"
+            fi
+          }
+
+          missing=0
+
+          if [ -z "$VITE_POSTHOG_PROJECT_TOKEN" ]; then
+            echo "::error::VITE_POSTHOG_PROJECT_TOKEN is not set"
+            missing=1
+          else
+            echo "VITE_POSTHOG_PROJECT_TOKEN=$(sanitize "$VITE_POSTHOG_PROJECT_TOKEN")"
+          fi
+
+          if [ -z "$VITE_POSTHOG_HOST" ]; then
+            echo "::error::VITE_POSTHOG_HOST is not set"
+            missing=1
+          else
+            echo "VITE_POSTHOG_HOST=$VITE_POSTHOG_HOST"
+          fi
+
+          if [ "$missing" -eq 1 ]; then
+            exit 1
+          fi
+
       - name: Build
-        env:
-          VITE_POSTHOG_PROJECT_TOKEN: ${{ secrets.VITE_POSTHOG_PROJECT_TOKEN }}
-          VITE_POSTHOG_HOST: ${{ secrets.VITE_POSTHOG_HOST }}
         run: bun run build -- --base "./"
 
       - name: Upload artifact
