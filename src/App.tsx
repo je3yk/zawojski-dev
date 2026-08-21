@@ -16,10 +16,10 @@ function App() {
             <span>zawojski</span>
             <span className="text-primary">.dev</span>
           </div>
-          <input type="checkbox" id="theme-toggle" className="sr-only" />
+          <input type="checkbox" id="theme-toggle" className="peer sr-only" />
           <label
             htmlFor="theme-toggle"
-            className="inline-flex cursor-pointer items-center gap-1.5 border border-border px-2 py-1 text-[10px] uppercase tracking-wide text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+            className="inline-flex cursor-pointer items-center gap-1.5 border border-border px-2 py-1 text-[10px] uppercase tracking-wide text-muted-foreground transition-colors hover:border-primary hover:text-primary peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary"
           >
             <span className="inline-flex items-center gap-1.5 [body:has(#theme-toggle:checked)_&]:hidden">
               <Moon size={12} />
