@@ -67,7 +67,7 @@ jobs:
           fi
 
       - name: Build
-        run: bun run build -- --base "./"
+        run: bun run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
