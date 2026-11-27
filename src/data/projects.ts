@@ -2,7 +2,7 @@ import type { ProjectEntry } from "@/components/ProjectCard";
 
 export const projects: ProjectEntry[] = [
   {
-    id: "tool-01",
+    id: "project-01",
     title: "software-factory",
     desc: "Agentic coding plugin for Claude Code and Codex that turns ideas into reviewed PRs through define → build → review → verify workflows, with a workflow explorer for its agents and skills.",
     tags: ["AI Agents", "Agentic", "Automation", "Workflows"],
@@ -11,7 +11,7 @@ export const projects: ProjectEntry[] = [
     repo: null,
   },
   {
-    id: "tool-02",
+    id: "project-02",
     title: "Donum",
     desc: "Wishlist app for sharing gift wishes with a touch of mystery.",
     tags: [
@@ -27,7 +27,7 @@ export const projects: ProjectEntry[] = [
     repo: null,
   },
   {
-    id: "tool-03",
+    id: "project-03",
     title: "zawojski-dev",
     desc: "Personal portfolio website with a terminal-inspired UI showcasing experience, tooling, and selected projects.",
     tags: [
